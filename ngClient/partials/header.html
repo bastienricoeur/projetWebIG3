@@ -1,0 +1,17 @@
+<div id="header">
+    <button class="c-hamburger" id="menuButton" onclick="moveMenu()" ng-show="showMenu">
+        <span>toggle menu</span>
+    </button>
+    <a ng-href="#/">
+      <div id="ico-OL"></div>
+    </a>
+</div>
+<div id='sideBar' ng-controller="HeaderCtrl" ng-show="showMenu">
+  <ul>
+    <li><a ng-href="#/">Catalogue</a></li>
+    <li><a ng-href="#/profil">Mon profil</a></li>
+    <li ng-show="admin"><a ng-href="#/listusr">Liste des membres</a></li>
+    <li ng-show="admin"><a ng-href="#/newprod">Ajouter un produit</a></li>
+    <li><a href="javascript:" ng-click="logout()">Se déconnecter</a></li>
+  </ul>
+</div>

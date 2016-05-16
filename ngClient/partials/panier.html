@@ -1,0 +1,42 @@
+<section class="mainDiv firstMain" ng-controller="CommandeCtrl">
+  <div class="borderTopNav"></div>
+    <div id="contenerCarts">
+      <h1>Mon panier</h1>
+      <hr>
+      <div class="contenerTab">
+        <table>
+          <thead>
+            <tr>
+              <th>Article</th>
+              <th>Prix</th>
+              <th>Quantité</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="cont in contCom.relationships">
+              <td>{{cont.attribute.nom}}</td>
+              <td>{{cont.attribute.prix}}</td>
+              <td>{{cont.quantite}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <div id="totalCom">Total : {{ total }}</div>
+        <div class="group">
+          <input type="text" name="url" ng-model="newFact.adresse" required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>Adresse de livraison</label>
+        </div>
+        <div id="cart">
+          Carte bleue :
+          <select ng-model="newFact.cb" ng-options="cart as cart.id for cart in optcarts track by cart.id">
+          </select>
+        </div>
+        <div class="buttonRetro buttonRetroSign">
+          <div class="borderBT borderButton"></div>
+          <div class="borderBB borderButton"></div>
+          <button type="button" ng-click="newFact()" class="buttonSub middleButton">ajouter</button>
+        </div>
+      </div>
+    </div>
+</section>

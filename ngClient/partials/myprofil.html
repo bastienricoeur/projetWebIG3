@@ -1,0 +1,46 @@
+
+<section class="mainDiv firstMain" ng-controller="MyProfilCtrl">
+  <div class="borderTopNav"></div>
+  <div class="panelHome panelHL panelHLProf">
+    <div class="container">
+        <div id="contenerProfil">
+          <h1>Mon profil</h1>
+          <hr>
+          <div id="contenuInfoProfil">
+            <div class="labelInfo">Adresse mail :</div>
+            <hr>
+            <div class="contInfo">{{userProfil.data.id}}</div>
+            <div class="labelInfo">Prénom :</div>
+            <hr>
+            <div class="contInfo">{{userProfil.data.attribute.prenom}}</div>
+            <div class="labelInfo">Nom :</div>
+            <hr>
+            <div class="contInfo">{{userProfil.data.attribute.nom}}</div>
+            <div class="labelInfo">Adresse postale :</div>
+            <hr>
+            <div class="contInfo">{{userProfil.data.attribute.adresse}}</div>
+            <div class="labelInfo">Téléphone :</div>
+            <hr>
+            <div class="contInfo">{{userProfil.data.attribute.telephone}}</div>
+          </div>
+
+        </div>
+    </div>
+  </div>
+  <div class="panelHome panelHR panelHRProf">
+    <div id="contenerButtonProfil">
+      <div class="buttonProfil">
+        <a ng-href="#/majprofil">Modifier mon profil</a>
+        <hr>
+      </div>
+      <div class="buttonProfil">
+        <a ng-href="#/mycarts">Gérer mes cartes bleues</a>
+        <hr>
+      </div>
+      <div class="buttonProfil">
+        <a href="javascript:" ng-click="delProf()">Supprimer mon profil</a>
+        <hr>
+      </div>
+    </div>
+  </div>
+</section>

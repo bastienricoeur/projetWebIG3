@@ -1,0 +1,32 @@
+<section class="mainDiv firstMain" ng-controller="CartsCtrl">
+  <div class="borderTopNav"></div>
+    <div id="contenerCarts">
+      <h1>Mes cartes bancaires</h1>
+      <hr>
+      <div class="contenerTab">
+        <div class="toolTab"><a ng-href="#/newcart"><i class="fa fa-plus"></i>Ajouter une carte</a></div>
+        <table>
+          <thead>
+            <tr>
+              <th>Numéro</th>
+              <th class="hideMob">Date d'exp</th>
+              <th>Titulaire</th>
+              <th class="hideMob">Pictogramme</th>
+              <th class="hideMob">Banque</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="cart in carts">
+              <td>{{cart.id}}</td>
+              <td class="hideMob">{{cart.attribute.dateexpiration | date:'dd-MM-yyyy'}}</td>
+              <td>{{cart.attribute.titulaire}}</td>
+              <td class="hideMob">{{cart.attribute.pictogramme}}</td>
+              <td class="hideMob">{{cart.attribute.banque}}</td>
+              <td class="buttonDelCart"><a href="javascript:" ng-click="deleteCB(cart.id)"><i class="fa fa-trash"></i></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+</section>

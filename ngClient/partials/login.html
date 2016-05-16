@@ -1,0 +1,70 @@
+<section class="mainDiv firstMain" id="loginFirstSec">
+            <div class="panelHome panelHL panelHLHome"></div>
+            <div class="panelHome panelHR panelHRHome">
+                <div class="contener">
+                    <div class="borderCT borderCadre borderCadreGrey"></div>
+                    <div class="borderCB borderCadre borderCadreGrey"></div>
+                    <div class="borderCL borderCadre borderCadreGrey"></div>
+                    <div class="borderCR borderCadre borderCadreGrey"></div>
+                    <div class="cercleTL cercleCadre cercleCadreGrey"></div>
+                    <div class="cercleTR cercleCadre cercleCadreGrey"></div>
+                    <div class="cercleBL cercleCadre cercleCadreGrey"></div>
+                    <div class="cercleBR cercleCadre cercleCadreGrey"></div>
+                    <div class="contenuCadre contenuHome">
+                        <h1>OldLantern</h1>
+                        <hr>
+                        <div class="text-home">
+                            La déco, c'est votre dada ?  Meubles, objets déco pour petits et grands, textiles... Vous n'aurez que l'embarras du choix pour donner une touche unique à votre intérieur.
+                        </div>
+                        <div class="text-home">
+                            OldLantern vous propose un choix immense de décorations pour votre intérieur. Tous nos produits respectent l'identité et la marque de l'entreprise. Nous tenons à donner une touche unique et originale à notre collection d'articles disponibles si dessous.
+                        </div>
+                        <div class="buttonRetro buttonRetroHome">
+                            <div class="borderBT borderButton"></div>
+                            <div class="borderBB borderButton"></div>
+                            <div class="middleButton" id="scrollConnect" ><a href="#loginSecondSec" target="_self">se connecter</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</section>
+
+<section class="mainDiv signInMain" id="loginSecondSec">
+  <div class="backgroundSignIn"></div>
+  <div class="contenerSignIn">
+    <div class="borderCT borderCadre borderCadreBlue"></div>
+    <div class="borderCB borderCadre borderCadreBlue"></div>
+    <div class="borderCL borderCadre borderCadreBlue"></div>
+    <div class="borderCR borderCadre borderCadreBlue"></div>
+    <div class="cercleTL cercleCadre cercleCadreBlue"></div>
+    <div class="cercleTR cercleCadre cercleCadreBlue"></div>
+    <div class="cercleBL cercleCadre cercleCadreBlue"></div>
+    <div class="cercleBR cercleCadre cercleCadreBlue"></div>
+    <div class="contenuCadre">
+      <form>
+        <div class="contenerForm contenerFormSignIn">
+          <p>Connectez-vous</p>
+          <hr>
+          <div class="group">
+            <input type="email" name="mailSignIn" id="username" ng-model="user.username" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Adresse mail</label>
+          </div>
+          <div class="group">
+            <input type="password" name="mdpSignIn" id="password" ng-model="user.password" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Mot de passe</label>
+          </div>
+          <div class="buttonRetro buttonRetroSign">
+            <div class="borderBT borderButton"></div>
+            <div class="borderBB borderButton"></div>
+            <button type="button" ng-click="login()"  class="buttonSub middleButton">se connecter</button>
+          </div>
+          <div id="signUpButton"><a ng-href="#/signup">S'inscrire</a></div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

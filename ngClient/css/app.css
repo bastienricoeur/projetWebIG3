@@ -1,0 +1,1354 @@
+/***************** Palette ********************
+             Author: Bastien Ricoeur
+
+|---- Couleur ----|----- Code -----|
+|   Vert          |    #b4dbbf     |
+|   Rouge         |    #b46357     |
+|   Bleu          |    #353f55     |
+|   Gris          |    #9b9b9b     |
+
+*/
+
+/**********  Chargement des polices   *****************************************/
+@font-face {
+    font-family: "Hallo Sans";
+    src: url('../font/Hallo sans.otf');
+}
+
+@font-face {
+    font-family: "LobsterTwo";
+    src: url('../font/LobsterTwo-Regular.ttf');
+}
+
+@font-face {
+    font-family: "LobsterTwo";
+    font-weight: italic;
+    src: url('../font/LobsterTwo-Italic.ttf');
+}
+
+@font-face {
+    font-family: "LobsterTwo";
+    font-weight: bold;
+    src: url('../font/LobsterTwo-Bold.ttf');
+}
+
+/**********  Elements principaux   *********************************************/
+
+body,html
+{
+    padding: 0;
+    margin: 0;
+    font-family: "Hallo Sans", Helvetica, Arial, sans-serif;
+    color: #3e3e40;
+}
+
+hr
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+h1,h2,h3
+{
+    margin: 0;
+}
+
+li
+{
+    list-style-type:none;
+}
+
+a
+{
+  text-decoration: none;
+}
+
+/**********  Header & Sidebar  ************************************************/
+#header
+{
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    z-index: 100;
+}
+
+#ico-OL
+{
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    width: 100px;
+    background-image: url('../img/oldlantern-ico.png');
+    background-position: center center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+}
+
+
+#menuButton
+{
+    margin-top: 12px;
+    margin-left: 17px;
+    position: absolute;
+}
+
+
+#sideBar
+{
+    width: 300px;
+    height: calc(100vh - 70px);
+    background-color: #b4dbbf;
+    position: fixed;
+    top: 70px;
+    left: -300px;
+    transition: 0.3s all ease;
+    z-index: 101;
+}
+
+#sideBar ul
+{
+    margin: 0;
+    padding: 0;
+    margin-top: 80px;
+    width: 100%;
+}
+
+#sideBar li
+{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    font-family: "LobsterTwo";
+    font-size: 28px;
+
+}
+
+#sideBar li a
+{
+  color : #3e3e40;
+}
+
+#sideBar li:hover
+{
+    background-color: white;
+}
+
+
+/**********  Structure des pages  ***************************************************/
+.mainDiv
+{
+    width: 100%;
+    height: calc(100vh - 70px);
+
+}
+
+.firstMain
+{
+    margin-top: 70px;
+}
+
+.secondMain
+{
+    min-height: calc(100vh - 70px);
+    height: auto;
+}
+
+.signInMain
+{
+   position: relative;
+}
+
+.bigDivSignUp
+{
+    height: 130%;
+    background-color: #b4dbbf;
+}
+
+
+
+/********** Cadre        *******************************************************/
+
+.borderCadre
+{
+    position: absolute;
+}
+
+.borderCadreGrey
+{
+    background-color: #9b9b9b;
+}
+
+.borderCadreWhite
+{
+    background-color: white;
+}
+
+.borderCadreBlue
+{
+    background-color: #353f55;
+}
+
+.borderCT
+{
+
+    width: calc(100% - 30px);
+    height: 1px;
+    left: 15px;
+    top: 35px;
+}
+
+.borderCB
+{
+
+    width: calc(100% - 30px);
+    height: 1px;
+    left: 15px;
+    bottom: 35px;
+}
+
+.borderCL
+{
+
+    width: 1px;
+    height: calc(100% - 30px);
+    left: 35px;
+    top: 15px;
+}
+
+.borderCR
+{
+
+    width: 1px;
+    height: calc(100% - 30px);
+    right: 35px;
+    top: 15px;
+}
+
+
+.cercleCadre
+{
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    position: absolute;
+}
+
+.cercleCadreGrey
+{
+    background-color: #9b9b9b;
+}
+
+.cercleCadreWhite
+{
+    background-color: white;
+}
+
+.cercleCadreBlue
+{
+    background-color: #353f55;
+}
+
+.cercleTL
+{
+    top: 22px;
+    left: 22px;
+}
+
+.cercleTR
+{
+    top: 22px;
+    right: 22px;
+}
+
+.cercleBL
+{
+    bottom: 22px;
+    left: 22px;
+}
+
+.cercleBR
+{
+    bottom: 22px;
+    right: 22px;
+}
+
+.contenuCadre
+{
+    height: calc(100% - 72px);
+    width: calc(100% - 72px);
+    top: 36px;
+    left: 36px;
+    position: absolute;
+}
+
+/**********  Button Retro    **************************************************/
+
+.buttonRetro
+{
+    height: 64px;
+    width: 224px;
+    position: relative;
+}
+
+.borderButton
+{
+    height: 13px;
+    width: 220px;
+    background-color: white;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    position: absolute;
+    z-index: 1;
+    transition: 0.3s all ease-in;
+
+}
+
+.borderBT
+{
+    top: 15px;
+    border-top: 2px solid black;
+}
+
+.borderBB
+{
+    top: 30px;
+    border-bottom: 2px solid black;
+}
+
+.middleButton
+{
+    width: 204px;
+    height: 36px;
+    border: 2px solid black;
+    top: 10px;
+    left: 8px;
+    background-color: #f7f7f7;
+    position: absolute;
+    z-index: 2;
+    transition: 0.3s all ease-in;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 36px;
+    font-size: 18px;
+    color: #b46357;
+}
+
+.buttonRetro:hover .borderBB
+{
+    height: 28px;
+}
+
+.buttonRetro:hover .borderBT
+{
+    height: 28px;
+    top: 0px;
+}
+
+.buttonRetro:hover .middleButton
+{
+    color: #3e3e40;
+}
+
+.buttonRetroHome
+{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+}
+
+
+#scrollConnect a
+{
+  color: #b46357;
+}
+
+
+
+/**********  Page d'Acceuil  **************************************************/
+
+.panelHome
+{
+    height: 100%;
+}
+
+.panelHL
+{
+    float: left;
+}
+
+.panelHR
+{
+    float: right;
+}
+
+.panelHLHome
+{
+  background-image: url('../img/img-home.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 55%;
+}
+
+
+
+.panelHRHome
+{
+  background-color: #353f55;
+  position: relative;
+  width: 45%;
+}
+
+
+.contenuCadre h1
+{
+    font-family: "LobsterTwo";
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 5px;
+    margin-top: 40px;
+}
+
+.contenuHome hr
+{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
+    width: 150px;
+    height: 2px;
+    background-color: white;
+}
+
+
+.text-home
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-left: 70px;
+    padding-right: 70px;
+    font-size: 18px;
+    color: white;
+}
+
+
+/**********  Page Products  **************************************************/
+
+.row {
+	width: calc(100% - 60px);
+        margin-left: 30px;
+        margin-top: 20px;
+        margin-bottom: 50px;
+        height: auto;
+        position: absolute;
+}
+
+.square
+{
+    float : left;
+    height: 300px;
+    width: 25%;
+    position: relative;
+}
+
+.squareContaint
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.squareImg
+{
+   z-index: 15;
+}
+
+.squareHover
+{
+   z-index: 16;
+   display: none;
+}
+
+.square:hover .squareImg
+{
+    display: none;
+}
+
+.square:focus .squareImg
+{
+    display: none;
+}
+
+.square:active .squareImg
+{
+    display: none;
+}
+
+.square:hover .squareHover
+{
+    display: block;
+}
+
+.square:focus .squareHover
+{
+    display: block;
+}
+
+.square:active .squareHover
+{
+    display: block;
+}
+
+.square-blue
+{
+    background-color: #353f55;
+}
+
+.square-red
+{
+    background-color: #b46357;
+}
+
+.square-green
+{
+    background-color: #b4dbbf;
+}
+
+
+.clear { clear : both ; }
+
+#rechProd
+{
+  margin-bottom: 20px;
+}
+.imgProduct
+{
+    height: calc(100% - 40px);
+    width: calc(100% - 40px);
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.imgProduct img
+{
+  height: 100%;
+  width: 100%;
+}
+
+.titleProduct
+{
+    text-align: center;
+    font-family: "LobsterTwo";
+    margin-top: 40px;
+    font-size: 24px;
+    color: white;
+}
+
+.priceProduct
+{
+    text-align: right;
+    margin-right: 20px;
+    font-size: 20px;
+    color: white;
+}
+
+.detailProduct
+{
+    text-align: center;
+    position: absolute;
+    top: 150px;
+    width: 76%;
+    height: 34px;
+    margin-left: 12%;
+    background-color: white;
+    text-transform: uppercase;
+    line-height: 34px;
+    font-size: 18px;
+    color: #b46357;
+    border: 2px solid black;
+    transition: 0.3s all ease;
+}
+
+.detailProduct a{
+  color: #b46357;
+}
+
+.detailProduct:hover
+{
+   cursor: pointer;
+}
+
+/**********  Page SignIn    ***************************************************/
+
+
+.backgroundSignIn
+{
+
+    background-image: url('../img/img-home.jpg');
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-position: center;
+    position: absolute;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -ms-filter: blur(5px);
+    -o-filter: blur(5px);
+    filter: blur(5px);
+
+}
+
+.contenerSignIn
+{
+    width: 80%;
+    height: 80%;
+    margin-left: 10%;
+    margin-top: calc(10% - 70px);
+    background-color: white;
+    position: absolute;
+}
+
+.contenerForm
+{
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #353f55;
+}
+
+
+.contenerForm p
+{
+    text-align: center;
+    font-size: 35px;
+}
+
+
+.contenerForm hr
+{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -20px;
+    margin-bottom: 10px;
+    width: 150px;
+    height: 2px;
+    background-color: #353f55;
+}
+
+.errorSignIn
+{
+    text-align: center;
+    color: #b46357;
+    margin-top: 30px;
+    font-size: 22px;
+    display: none;
+}
+
+.buttonRetroSign
+{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+.buttonRetroSign .middleButton
+{
+    background-color: white;
+}
+
+.buttonSub{
+  height: 40px;
+  margin-left: 2px;
+}
+
+#signUpButton
+{
+    font-size: 18px;
+    width: 58px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid #353f55;
+    transition: 0.2s all ease;
+}
+
+#signUpButton a{
+  color: #353f55;
+}
+
+#signUpButton:hover
+{
+    border-color: #9b9b9b;
+    cursor: pointer;
+}
+
+#signUpButton:hover a
+{
+    color: #9b9b9b;
+}
+
+/**********  Page SignUp    ***************************************************/
+
+.contenerSignUp
+{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 50px;
+    height: 110%;
+    background-color: white;
+    position: absolute;
+}
+
+/**********  Page Profil    ***************************************************/
+
+.borderTopNav
+{
+  width: 100%;
+  height: 3px;
+  background-color: #b4dbbf;
+  position: fixed;
+  z-index: 99
+}
+
+.panelHLProf
+{
+  width: 50%;
+}
+
+.panelHRProf
+{
+  width: 50%;
+}
+
+#contenerProfil
+{
+  color: #353f55;
+  width: 100%;
+  text-align: center;
+  margin-top: 70px;
+}
+
+#contenerProfil h1
+{
+  font-size: 44px;
+  font-family: "LobsterTwo";
+  font-weight: normal;
+}
+
+#contenerProfil hr
+{
+  height: 2px;
+  background-color: #b4dbbf;
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+}
+
+#contenuInfoProfil
+{
+  margin-top: 50px;
+  margin-left: 150px;
+  text-align: left;
+
+}
+
+#contenuInfoProfil hr
+{
+  margin: 0;
+  margin-bottom: 10px;
+  width: 40px;
+}
+
+.labelInfo
+{
+    font-size: 25px;
+    font-family: "LobsterTwo";
+}
+
+.contInfo
+{
+    font-size: 19px;
+    margin-left: 5px;
+    margin-bottom: 20px;
+    font-family: "Hallo Sans", Helvetica, Arial, sans-serif;
+}
+
+#contenerButtonProfil
+{
+  margin-top: 200px;
+}
+
+.buttonProfil
+{
+  text-align: center;
+}
+
+.buttonProfil a
+{
+  color: #353f55;
+  font-size: 25px;
+  transition: 0.3s all ease;
+}
+
+.buttonProfil a:hover
+{
+  color: #b4dbbf;
+}
+
+
+
+.buttonProfil hr
+{
+  height: 2px;
+  background-color: #b4dbbf;
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+#renUp
+{
+  font-size: 20px;
+}
+
+/**********  Page Cartes    ***************************************************/
+
+#contenerCarts
+{
+  text-align: center;
+  margin-top: 40px;
+  width: 100%;
+  position: absolute;
+
+}
+#contenerCarts h1
+{
+  font-size: 44px;
+  font-family: "LobsterTwo";
+  font-weight: normal;
+
+}
+
+#contenerCarts hr
+{
+  height: 2px;
+  background-color: #b4dbbf;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+}
+
+
+.contenerTab
+{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+.toolTab
+{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+.toolTab a{
+  color:#353f55;
+  font-size: 18px;
+  transition: 0.3s all ease;
+}
+
+.toolTab a:hover{
+  color:#b4dbbf;
+}
+
+.toolTab a i {
+  margin-right: 5px;
+}
+
+.contenerTab table
+{
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse:collapse;
+  font-size: 20px;
+  color: #353f55;
+
+}
+
+.contenerTab th
+{
+  font-family: "LobsterTwo";
+  font-weight: normal;
+}
+
+
+.contenerTab th,td{
+  border-bottom: 2px solid #b4dbbf;
+  width: 18%;
+  height: 30px;
+}
+
+.buttonDelCart a
+{
+  color: #353f55;
+  transition: 0.3s all ease;
+}
+
+.buttonDelCart a:hover
+{
+  color: #b4dbbf;
+}
+
+/**********  Page New product    ***************************************************/
+
+.group textarea
+{
+  width: 300px;
+  height: 80px;
+}
+
+/**********  Page Detail    ***************************************************/
+
+#errorStock
+{
+  margin-top: 10px;
+  text-align: center;
+  font-size: 28px;
+  font-family: "LobsterTwo";
+  color: #b46357;
+}
+
+#contenerImg
+{
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 40px;
+}
+
+#contenerImg img
+{
+  width: 100%;
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+.buttonProfil input
+{
+  width:100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.descInput
+{
+  font-size: 20px;
+  color: #353f55;
+  margin-top: 20px;
+}
+
+.subReq
+{
+
+  font-size: 18px !important;
+  border-bottom: 1px solid #b4dbbf;
+}
+
+.buttonCommande
+{
+  margin-top: 0;
+}
+ #cart{
+   float: left;
+   margin-top: 20px;
+ }
+
+ .textFinal
+ {
+   font-size: 20px;
+   text-align: center;
+ }
+
+ #decoFinal
+ {
+   text-align: center;
+   margin-top: 20px;
+   text-transform: uppercase;
+ }
+
+ #decoFinal a
+ {
+   color: #353f55;
+   border-bottom: 2px solid #353f55;
+ }
+
+
+/********** Input Google Material Design ***************************************/
+
+.group{
+  position:relative;
+  margin-top:30px;
+}
+
+input{
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:300px;
+  border:none;
+  border-bottom:1px solid #b4dbbf;
+}
+input:focus { outline:none; }
+
+label {
+  color:#353f55;
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+
+input:focus ~ label, input:valid ~ label {
+  top:-20px;
+  font-size:14px;
+  color:#353f55;
+}
+
+
+.bar { position:relative; display:block; width:300px; }
+
+.bar:before, .bar:after 	{
+  content:'';
+  height:2px;
+  width:0;
+  bottom:1px;
+  position:absolute;
+  background:#b4dbbf;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%;
+}
+
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+.highlight {
+  position:absolute;
+  height:60%;
+  width:100px;
+  top:25%;
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+@-webkit-keyframes inputHighlighter {
+	from { background:#b4dbbf; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background:#b4dbbf; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from { background:#b4dbbf; }
+  to 	{ width:0; background:transparent; }
+}
+
+
+
+/**********  Bouton menu animé    **********************************************/
+
+.c-hamburger {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 46px;
+  height: 46px;
+  font-size: 0;
+  text-indent: -9999px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background 0.3s;
+          transition: background 0.3s;
+}
+
+.c-hamburger:focus {
+  outline: none;
+}
+
+.c-hamburger span {
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 5px;
+  right: 5px;
+  height: 3px;
+  background: #353f55;
+}
+
+.c-hamburger span::before,
+.c-hamburger span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #353f55;
+  content: "";
+}
+
+.c-hamburger span::before {
+  top: -10px;
+}
+
+.c-hamburger span::after {
+  bottom: -10px;
+}
+
+.c-hamburger {
+  background-color: #fff;
+}
+
+.c-hamburger span {
+  -webkit-transition: background 0s 0.3s;
+          transition: background 0s 0.3s;
+}
+
+.c-hamburger span::before,
+.c-hamburger span::after {
+  -webkit-transition-duration: 0.3s, 0.3s;
+          transition-duration: 0.3s, 0.3s;
+  -webkit-transition-delay: 0.3s, 0s;
+          transition-delay: 0.3s, 0s;
+}
+
+.c-hamburger span::before {
+  -webkit-transition-property: top, -webkit-transform;
+          transition-property: top, transform;
+}
+
+.c-hamburger span::after {
+  -webkit-transition-property: bottom, -webkit-transform;
+          transition-property: bottom, transform;
+}
+
+/* active state, i.e. menu open */
+.c-hamburger.is-active {
+  background-color: #fff;
+}
+
+.c-hamburger.is-active span {
+  background: none;
+}
+
+.c-hamburger.is-active span::before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.c-hamburger.is-active span::after {
+  bottom: 0;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.c-hamburger.is-active span::before,
+.c-hamburger.is-active span::after {
+  -webkit-transition-delay: 0s, 0.3s;
+          transition-delay: 0s, 0.3s;
+}
+
+/********** Media Queries Home *****************/
+
+@media screen and (max-width: 1006px)
+{
+    .panelHL
+    {
+        width: 43%;
+        background-size: 200%;
+    }
+
+    .panelHR
+    {
+        width: 57%;
+    }
+
+}
+
+
+@media screen and (max-width: 892px)
+{
+    .panelHL
+    {
+        width: 0;
+    }
+
+    .panelHR
+    {
+        width: 100%;
+    }
+
+    .panelHLProf
+    {
+      width: 100%;
+    }
+
+    .panelHRProf
+    {
+      width: 100%;
+    }
+
+    #contenerButtonProfil
+    {
+      margin-top: 0;
+    }
+
+    .contenerSignIn
+    {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 0;
+    }
+
+}
+
+@media screen and (max-width: 444px)
+{
+    .buttonRetroHome
+    {
+        margin-top: 30px;
+    }
+
+}
+
+@media screen and (max-width: 410px)
+{
+    .buttonRetroHome
+    {
+        margin-top: 0px;
+    }
+
+}
+
+@media screen and (max-width: 403px)
+{
+    .contenuCadre hr
+    {
+        margin-bottom: 40px;
+    }
+
+}
+
+@media screen and (max-height: 760px)
+{
+    .mainDiv
+    {
+
+        height: calc(120vh - 80px);
+
+    }
+
+}
+
+@media screen and (max-height: 635px)
+{
+    .mainDiv
+    {
+
+        height: calc(150vh - 80px);
+
+    }
+
+}
+
+/********** Media Queries Catalogue *****************/
+
+@media screen and (max-width: 1080px)
+{
+    .square
+    {
+        width: 33%;
+    }
+}
+
+@media screen and (max-width: 850px)
+{
+    .square
+    {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 550px)
+{
+    .square
+    {
+        width: 100%;
+    }
+}
+
+/********** Media Queries Tab *****************/
+
+@media screen and (max-width: 635px)
+{
+    .hideMob
+    {
+        display: none;
+    }
+}
+
+/********** Media Queries input *****************/
+
+@media screen and (max-width: 523px)
+{
+    .contenerSignUp
+    {
+      width: 100%;
+      margin:0;
+      margin-top: 2px;
+    }
+}

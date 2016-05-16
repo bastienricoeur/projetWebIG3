@@ -1,0 +1,29 @@
+<section class="mainDiv firstMain" ng-controller="ProductCtrl">
+  <div class="borderTopNav"></div>
+
+  <div class="row" >
+    <input ng-model='filterProd' placeholder="Recherche un produit" id="rechProd">
+    <div ng-repeat='product in filtered = (products | filter:filterProd)' class="square">
+      <div class="squareContaint squareImg">
+        <div class="imgProduct"><img ng-src="{{product.attribute.img}}" alt="{{product.attribute.nom}}"/></div>
+      </div>
+      <div class="squareContaint squareHover square-blue">
+        <div class="borderCT borderCadre borderCadreWhite"></div>
+        <div class="borderCB borderCadre borderCadreWhite"></div>
+        <div class="borderCL borderCadre borderCadreWhite"></div>
+        <div class="borderCR borderCadre borderCadreWhite"></div>
+        <div class="cercleTL cercleCadre cercleCadreWhite"></div>
+        <div class="cercleTR cercleCadre cercleCadreWhite"></div>
+        <div class="cercleBL cercleCadre cercleCadreWhite"></div>
+        <div class="cercleBR cercleCadre cercleCadreWhite"></div>
+        <div class="contenuCadre">
+          <div class="titleProduct">{{product.attribute.nom}}</div>
+          <div class="priceProduct">{{product.attribute.prix}} €</div>
+          <div class="detailProduct"><a ng-href="/#/detail/{{product.id}}">details</a></div>
+        </div>
+      </div>
+    </div>
+
+    <p class="clear"></p>
+  </div>
+</section>

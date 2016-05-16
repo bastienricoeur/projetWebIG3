@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="ngclient">
+
+<head>
+  <title>OldLantern, custom homes</title>
+
+  <link rel="stylesheet" type="text/css" href="css/app.css">
+  <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+
+  <script type="text/javascript" src="libs/angular/angular.min.js"></script>
+  <script type="text/javascript" src="libs/angular-route/angular-route.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+  <div ng-include="'partials/header.html'"></div>
+  <div class="container" ng-view></div>
+  <div ng-include="'partials/footer.html'"></div>
+
+  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="js/controllers.js"></script>
+  <script type="text/javascript" src="js/style.js"></script>
+
+  <script type="text/javascript" src="js/auth/auth.factory.js"></script>
+  <script type="text/javascript" src="js/auth/auth.controller.js"></script>
+
+  <script type="text/javascript" src="js/subscribe/subscribe.factory.js"></script>
+  <script type="text/javascript" src="js/subscribe/subscribe.controller.js"></script>
+
+  <script type="text/javascript" src="js/profil/profil.factory.js"></script>
+  <script type="text/javascript" src="js/profil/profil.controller.js"></script>
+
+  <script type="text/javascript" src="js/carts/carts.factory.js"></script>
+  <script type="text/javascript" src="js/carts/carts.controller.js"></script>
+
+  <script type="text/javascript" src="js/users/users.factory.js"></script>
+  <script type="text/javascript" src="js/users/users.controller.js"></script>
+
+  <script type="text/javascript" src="js/products/products.factory.js"></script>
+  <script type="text/javascript" src="js/products/products.controller.js"></script>
+
+  <script type="text/javascript" src="js/commande/commande.factory.js"></script>
+  <script type="text/javascript" src="js/commande/commande.controller.js"></script>
+
+</body>
+
+</html>

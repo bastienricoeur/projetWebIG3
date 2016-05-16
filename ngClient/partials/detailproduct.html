@@ -1,0 +1,52 @@
+<section class="mainDiv firstMain" ng-controller="ProductDetCtrl" ng-repeat="det in prodDet">
+  <div class="borderTopNav"></div>
+  <div class="panelHome panelHL panelHLProf">
+    <div class="container">
+        <div id="contenerProfil">
+          <h1>Détails du produit</h1>
+          <hr>
+          <div id="contenuInfoProfil">
+            <div class="labelInfo">Nom :</div>
+            <hr>
+            <div class="contInfo">{{det.attribute.nom}}</div>
+            <div class="labelInfo">Prix :</div>
+            <hr>
+            <div class="contInfo">{{det.attribute.prix}}€</div>
+            <div class="labelInfo">Type de produit :</div>
+            <hr>
+            <div class="contInfo">{{det.relationships.typeproduct.data.attribute.libelle}}</div>
+            <div class="labelInfo">Description :</div>
+            <hr>
+            <div class="contInfo">{{det.attribute.description}}</div>
+            <div ng-show="stockEpuise(det.attribute.nbExemp)"id="errorStock">
+              Stock momentanément épuisé, merci de votre compréhension.
+            </div>
+          </div>
+
+        </div>
+    </div>
+  </div>
+  <div class="panelHome panelHR panelHRProf">
+    <div id="contenerImg">
+      <img ng-src="{{det.attribute.img}}" alt="{{det.attribute.nom}}"/>
+      <div class="buttonProfil">
+        <div ng-show="admin">
+          <a ng-href="#/uptproduct/{{det.id}}">Modifier le produit</a>
+          <hr>
+          <div class="descInput">Modifier le nombre d'exemplaires en stock :</div>
+          <input type="number" ng-model="uptQte.qte">
+          <a class="subReq" href="javascript:" ng-click="uptQte()">Enregistrer</a>
+
+          <div class="descInput">Quantité souhaitée :</div>
+          <input type="number" ng-model="com.qte" >
+          <div class="buttonRetro buttonRetroSign buttonCommande">
+            <div class="borderBT borderButton"></div>
+            <div class="borderBB borderButton"></div>
+            <button type="button" ng-click="commandeProd()" class="buttonSub middleButton">acheter</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

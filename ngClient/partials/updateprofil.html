@@ -1,0 +1,59 @@
+<div class="mainDiv firstMain signUpMain" ng-controller="MyProfilCtrl">
+  <div class="bigDivSignUp">
+    <div class="contenerSignUp">
+      <div class="borderCT borderCadre borderCadreBlue"></div>
+      <div class="borderCB borderCadre borderCadreBlue"></div>
+      <div class="borderCL borderCadre borderCadreBlue"></div>
+      <div class="borderCR borderCadre borderCadreBlue"></div>
+      <div class="cercleTL cercleCadre cercleCadreBlue"></div>
+      <div class="cercleTR cercleCadre cercleCadreBlue"></div>
+      <div class="cercleBL cercleCadre cercleCadreBlue"></div>
+      <div class="cercleBR cercleCadre cercleCadreBlue"></div>
+      <div class="contenuCadre">
+        <form>
+          <div class="contenerForm contenerFormSigUp">
+            <p>Modifier votre profil</p>
+            <hr>
+            <p id="renUp">Veuillez remplir tous les champs du formulaire</p>
+            <div class="group">
+              <input type="password" name="mdpSignUp" ng-model="userUpt.password" required>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label>Mot de passe</label>
+            </div>
+            <div class="group">
+              <input type="text" name="firstNameSignUp" ng-model="userUpt.prenom" required>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label>{{userProfil.data.attribute.prenom}}</label>
+            </div>
+            <div class="group">
+              <input type="text" name="lastNameSignUp" ng-model="userUpt.nom" required>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label>{{userProfil.data.attribute.nom}}</label>
+            </div>
+            <div class="group">
+              <input type="text" name="adressSignUp" ng-model="userUpt.adresse" required>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label>{{userProfil.data.attribute.adresse}}</label>
+            </div>
+            <div class="group">
+              <input type="tel" name="phoneSignUp" ng-model="userUpt.tel" required>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label>{{userProfil.data.attribute.telephone}}</label>
+            </div>
+            <div class="buttonRetro buttonRetroSign">
+              <div class="borderBT borderButton"></div>
+              <div class="borderBB borderButton"></div>
+              <button type="button" ng-click="subUpdate()" class="buttonSub middleButton">modifier</button>
+            </div>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

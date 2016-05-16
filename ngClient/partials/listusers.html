@@ -1,0 +1,41 @@
+<section class="mainDiv firstMain" ng-controller="UsersCtrl">
+  <div class="borderTopNav"></div>
+    <div id="contenerCarts">
+      <h1>Listes des membres</h1>
+      <hr>
+      <div class="contenerTab">
+        <div class="toolTab"><input ng-model='filterExpr' placeholder="Recherche un membre"></div>
+        <table>
+          <thead>
+            <tr>
+              <th>Mail</th>
+              <th class="hideMob">Prénom</th>
+              <th>Nom</th>
+              <th class="hideMob">Adresse</th>
+              <th class="hideMob">Téléphone</th>
+              <th>Rôle</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat='user in filtered = (users | filter:filterExpr)'>
+              <td>{{user.id}}</td>
+              <td class="hideMob">{{user.attribute.prenom}}</td>
+              <td>{{user.attribute.nom}}</td>
+              <td class="hideMob">{{user.attribute.adresse}}</td>
+              <td class="hideMob">{{user.attribute.telephone}}</td>
+              <td class="buttonDelCart">
+                <a ng-show="whatrole(user.attribute.role)" href="javascript:" ng-click="uptRole(false,user.id)">
+                  <i class="fa fa-user-secret"></i>
+                </a>
+                <a ng-hide="whatrole(user.attribute.role)" href="javascript:" ng-click="uptRole(true,user.id)">
+                  <i class="fa fa-user"></i>
+                </a>
+              </td>
+              <td class="buttonDelCart"><a href="javascript:" ng-click="deleteUsr(user.id)"><i class="fa fa-trash"></i></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+</section>

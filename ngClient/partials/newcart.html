@@ -1,0 +1,55 @@
+<div class="mainDiv firstMain signUpMain" ng-controller="CartsCtrl">
+  <div class="bigDivSignUp">
+    <div class="contenerSignUp">
+      <div class="borderCT borderCadre borderCadreBlue"></div>
+      <div class="borderCB borderCadre borderCadreBlue"></div>
+      <div class="borderCL borderCadre borderCadreBlue"></div>
+      <div class="borderCR borderCadre borderCadreBlue"></div>
+      <div class="cercleTL cercleCadre cercleCadreBlue"></div>
+      <div class="cercleTR cercleCadre cercleCadreBlue"></div>
+      <div class="cercleBL cercleCadre cercleCadreBlue"></div>
+      <div class="cercleBR cercleCadre cercleCadreBlue"></div>
+      <div class="contenuCadre">
+        <form>
+          <div class="contenerForm contenerFormSigUp">
+            <p>Ajouter une carte bancaire</p>
+            <hr>
+            <div class="group">
+              <input type="text" name="numeroCB" ng-model="newCB.numeroCB" required>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label>Numéro de la carte</label>
+            </div>
+            <div class="group">
+              <input type="text" name="titulaire" ng-model="newCB.titulaire" required>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label>Titutlaire</label>
+            </div>
+            <div class="group">
+              <input type="number" MIN=100 name="picto" ng-model="newCB.pictogramme" required>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label>Pictogramme</label>
+            </div>
+            <div class="group">
+              <input type="text" name="phoneSignUp" ng-model="newCB.banque" required>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label>Banque</label>
+            </div>
+            <div class="group">
+              <input type="date" name="dateExp" ng-model="newCB.date" required>
+            </div>
+            <div class="buttonRetro buttonRetroSign">
+              <div class="borderBT borderButton"></div>
+              <div class="borderBB borderButton"></div>
+              <button type="button" ng-click="createCB()" class="buttonSub middleButton">ajouter</button>
+            </div>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
